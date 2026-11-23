@@ -1,13 +1,13 @@
-# ansb-tui
+# ansb-teraz-tui
 
 A terminal version of [**ANSB teraz**](https://erykdarnowski.pl/ansb.html), a small PWA I run on my website. ANSB teraz lets me look up my class's weekend timetable and the current lecture at a simple URL, without logging in to USOS.
 
-ansb-tui shows the same thing (what's on right now, how long until it ends, what comes next) and runs fine in a small vim/tmux split. Both use the same API, which pulls the plan from USOS and adds the breaks between classes.
+ansb-teraz-tui shows the same thing (what's on right now, how long until it ends, what comes next) and runs fine in a small vim/tmux split. Both use the same API, which pulls the plan from USOS and adds the breaks between classes.
 
 - **Now view:** current block, countdown, next block and time left in the day, with progress bars. It uses big digits when there's room and switches to more compact layouts in small panes.
 - **Timetable view:** the full Saturday or Sunday plan. Finished blocks are greyed out, the current one is marked `▶`, and long titles scroll.
 - The clock is synced to the server's `Date` header (re-synced with `HEAD` every 10 min, so the API stats counter isn't bumped).
-- The last fetched plan is cached in `~/.cache/ansb-tui/`, so it still opens offline.
+- The last fetched plan is cached in `~/.cache/ansb-teraz-tui/`, so it still opens offline.
 
 Zero dependencies, Node ≥ 20.
 
@@ -42,14 +42,14 @@ niedziela 12:30:02
 You need [Node.js](https://nodejs.org) 20 or newer (`node -v` to check). There are no other dependencies.
 
 ```sh
-npm install -g github:ErykDarnowski/ansb-tui
+npm install -g github:ErykDarnowski/ansb-teraz-tui
 ansb
 ```
 
 npm downloads the repo and installs it into its own global folder, so you don't need to keep a clone around. To update, run the same command again. To uninstall:
 
 ```sh
-npm uninstall -g ansb-tui
+npm uninstall -g ansb-teraz-tui
 ```
 
 If npm complains about permissions, your global npm folder is owned by root. Point it somewhere in your home directory instead (and make sure `~/.local/bin` is on your PATH):

@@ -1,5 +1,5 @@
 {
-  "name": "ansb-tui",
+  "name": "ansb-teraz-tui",
   "version": "1.0.0",
   "description": "ANSB teraz in your terminal: current lecture, countdowns and the weekend timetable",
   "type": "module",

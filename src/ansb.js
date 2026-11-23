@@ -83,7 +83,7 @@ const now = () =>
 
 const cacheFile = path.join(
   process.env.XDG_CACHE_HOME || path.join(os.homedir(), '.cache'),
-  'ansb-tui',
+  'ansb-teraz-tui',
   'schedule.json',
 )
 
@@ -114,7 +114,7 @@ function applyOffset(res) {
 
 async function fetchSchedule() {
   try {
-    const res = await fetch(opts.api, { signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': `ansb-tui/${VERSION}` } })
+    const res = await fetch(opts.api, { signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': `ansb-teraz-tui/${VERSION}` } })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
     applyOffset(res)
     const data = await res.json()
@@ -135,7 +135,7 @@ async function fetchSchedule() {
 // HEAD doesn't bump the server's daily stats counter, so use it for clock sync.
 async function syncOffset() {
   try {
-    const res = await fetch(opts.api, { method: 'HEAD', signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': `ansb-tui/${VERSION}` } })
+    const res = await fetch(opts.api, { method: 'HEAD', signal: AbortSignal.timeout(10_000), headers: { 'User-Agent': `ansb-teraz-tui/${VERSION}` } })
     applyOffset(res)
   } catch {}
 }
@@ -336,7 +336,7 @@ function infoView() {
   const fetched = S.fetchedAt ? new Date(S.fetchedAt).toLocaleString('pl-PL') : '—'
   return [
     bold('Info'), '',
-    `Front: ansb-tui ${VERSION}${virtualBase ? '-D' : ''}`,
+    `Front: ansb-teraz-tui ${VERSION}${virtualBase ? '-D' : ''}`,
     `Back:  ${S.apiVersion || '—'}`,
     `Plan:  ${fetched}${S.fromCache ? ' (cache)' : ''}`,
     `Offset zegara: ${S.offset} ms`,

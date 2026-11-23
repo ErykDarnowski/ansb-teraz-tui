@@ -30,22 +30,28 @@ niedziela 12:30:02
 
 ## Install
 
-You need [Node.js](https://nodejs.org) 20 or newer (`node -v` to check). There are no other dependencies, so there's nothing to `npm install`.
+You need [Node.js](https://nodejs.org) 20 or newer (`node -v` to check). There are no other dependencies.
 
 ```sh
-git clone https://github.com/ErykDarnowski/ansb-tui.git
-cd ansb-tui
-npm link        # puts the `ansb` command on your PATH
+npm install -g github:ErykDarnowski/ansb-tui
 ansb
 ```
 
-`npm link` symlinks the command to your clone, so a `git pull` updates it too. If npm complains about permissions, your global npm prefix needs root. Either set a user prefix (`npm config set prefix ~/.local`, with `~/.local/bin` on your PATH) or skip linking and use an alias:
+npm downloads the repo and installs it into its own global folder, so you don't need to keep a clone around. To update, run the same command again. To uninstall:
 
 ```sh
-alias ansb="node /path/to/ansb-tui/src/ansb.js"
+npm uninstall -g ansb-tui
 ```
 
-To uninstall, run `npm unlink -g ansb-tui` and delete the clone.
+If npm complains about permissions, your global npm folder is owned by root. Point it somewhere in your home directory instead (and make sure `~/.local/bin` is on your PATH):
+
+```sh
+npm config set prefix ~/.local
+```
+
+### Working on it
+
+To hack on the code, clone the repo and run `npm link` inside it. That points `ansb` at your clone, so changes take effect right away. Run `npm test` to check the schedule logic.
 
 ## Use
 
@@ -78,8 +84,6 @@ ansb --at "2026-11-29 12:30"   # mid-lecture
 ansb --at "2026-11-29 17:55"   # last block
 ansb --at "2026-11-29 19:00"   # after classes
 ```
-
-`npm test` runs the schedule logic tests.
 
 ## Config
 

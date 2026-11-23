@@ -4,6 +4,7 @@
   "description": "ANSB teraz in your terminal: current lecture, countdowns and the weekend timetable",
   "type": "module",
   "bin": { "ansb": "src/ansb.js" },
+  "files": ["src"],
   "scripts": {
     "start": "node src/ansb.js",
     "test": "node --test"

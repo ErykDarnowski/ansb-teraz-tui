@@ -9,6 +9,23 @@ Terminal version of the ANSB weekend timetable. It runs fine in a small vim/tmux
 
 Zero dependencies, Node ≥ 20.
 
+```
+niedziela 12:30:02
+
+                      TERAZ:
+    Problemy społeczne i zawodowe informatyki
+            Jan Kowalski · ĆW-P (E111)
+
+                    Do końca:
+           ┌─┐ ┌─┐     ╷ ┌─┐   ┌─╴ ╶─┐
+           │ │ │ │ •   │ └─┤ • └─┐   │
+           └─┘ └─┘     ╵ ╶─┘   ╶─┘   ╵
+          ━━━━━━━━━━━━━━───────────  55%
+
+                     Kolejne:
+                 PRZERWA [00:20]
+```
+
 ## Install
 
 ```sh
@@ -34,5 +51,21 @@ From vim: `:vert term ansb` (or `:term ++rows=20 ansb`). In Neovim: `:vsplit | t
 | `i`                   | version / info                  |
 | `?`                   | help                            |
 | `q`                   | quit                            |
+
+## Debugging
+
+`--at` starts the clock at the given time and then lets it tick in real time. It's the TUI version of the web app's `debug`/`debugDate`, and the info screen shows the version with a `-D` suffix. Pick a weekend date that has classes in the current plan:
+
+```sh
+ansb --at "2026-11-29 08:00"   # before classes
+ansb --at "2026-11-29 11:12"   # during a break
+ansb --at "2026-11-29 12:30"   # mid-lecture
+ansb --at "2026-11-29 17:55"   # last block
+ansb --at "2026-11-29 19:00"   # after classes
+```
+
+`npm test` runs the schedule logic tests.
+
+## Config
 
 `NO_COLOR=1` disables colours. `ANSB_API` or `--api` overrides the endpoint.

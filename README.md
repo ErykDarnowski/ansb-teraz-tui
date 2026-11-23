@@ -30,9 +30,22 @@ niedziela 12:30:02
 
 ## Install
 
+You need [Node.js](https://nodejs.org) 20 or newer (`node -v` to check). There are no other dependencies, so there's nothing to `npm install`.
+
 ```sh
-npm link        # puts `ansb` on your PATH
+git clone https://github.com/ErykDarnowski/ansb-tui.git
+cd ansb-tui
+npm link        # puts the `ansb` command on your PATH
+ansb
 ```
+
+`npm link` symlinks the command to your clone, so a `git pull` updates it too. If npm complains about permissions, your global npm prefix needs root. Either set a user prefix (`npm config set prefix ~/.local`, with `~/.local/bin` on your PATH) or skip linking and use an alias:
+
+```sh
+alias ansb="node /path/to/ansb-tui/src/ansb.js"
+```
+
+To uninstall, run `npm unlink -g ansb-tui` and delete the clone.
 
 ## Use
 

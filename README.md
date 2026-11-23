@@ -1,6 +1,8 @@
 # ansb-teraz-tui
 
-![ansb-teraz-tui: a lecture's countdown running out and rolling over to the next one, then the timetable view](demo.gif)
+<p align="center">
+  <img src="demo.gif" width="90%" alt="ansb-teraz-tui: a lecture's countdown running out and rolling over to the next one, then the timetable view">
+</p>
 
 A terminal (TUI) version of [**ANSB teraz**](https://erykdarnowski.pl/ansb.html), a small PWA I run on my website. ANSB teraz lets me look up my class's weekend timetable and the current lecture at a simple URL, without logging in to USOS.
 

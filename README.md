@@ -15,22 +15,7 @@ ansb-teraz-tui shows the same thing (what's on right now, how long until it ends
 
 Zero dependencies, Node ≥ 20.
 
-```
-niedziela 12:30:02
-
-                      TERAZ:
-    Problemy społeczne i zawodowe informatyki
-            Jan Kowalski · ĆW-P (E111)
-
-                    Do końca:
-           ┌─┐ ┌─┐     ╷ ┌─┐   ┌─╴ ╶─┐
-           │ │ │ │ •   │ └─┤ • └─┐   │
-           └─┘ └─┘     ╵ ╶─┘   ╶─┘   ╵
-          ━━━━━━━━━━━━━━───────────  55%
-
-                     Kolejne:
-                 PRZERWA [00:20]
-```
+![ansb-teraz-tui: a lecture's countdown running out and rolling over to the next one, then the timetable view](demo.gif)
 
 ## Contents
 

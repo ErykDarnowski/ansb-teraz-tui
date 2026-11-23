@@ -7,7 +7,7 @@ import {
   BREAK, DAY_NAMES, computeState, fmtDuration, isBreak, isWeekend, splitTitle, todayIndex,
 } from './schedule.js'
 
-const VERSION = '0.1.0'
+const VERSION = '1.0.0'
 const DEFAULT_API = 'https://erykdarnowski.pl/ansb-api.php'
 const OFFSET_SYNC_MS = 10 * 60 * 1000
 const RETRY_MS = 60 * 1000

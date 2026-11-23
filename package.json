@@ -2,14 +2,37 @@
   "name": "ansb-teraz-tui",
   "version": "1.0.0",
   "description": "ANSB teraz in your terminal: current lecture, countdowns and the weekend timetable",
+  "author": "Eryk Darnowski",
+  "homepage": "https://github.com/ErykDarnowski/ansb-teraz-tui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErykDarnowski/ansb-teraz-tui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ErykDarnowski/ansb-teraz-tui/issues"
+  },
+  "keywords": [
+    "tui",
+    "terminal",
+    "cli",
+    "timetable",
+    "schedule",
+    "usos"
+  ],
   "type": "module",
-  "bin": { "ansb": "src/ansb.js" },
-  "files": ["src"],
+  "bin": {
+    "ansb": "src/ansb.js"
+  },
+  "files": [
+    "src"
+  ],
   "scripts": {
     "start": "node src/ansb.js",
     "test": "node --test"
   },
-  "engines": { "node": ">=20" },
+  "engines": {
+    "node": ">=20"
+  },
   "license": "SEE LICENSE IN LICENSE",
   "private": true
 }

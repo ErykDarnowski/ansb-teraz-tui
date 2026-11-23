@@ -2,7 +2,7 @@
   "name": "ansb-teraz-tui",
   "version": "1.0.0",
   "description": "ANSB teraz in your terminal: current lecture, countdowns and the weekend timetable",
-  "author": "Eryk Darnowski",
+  "author": "Eryk Darnowski <github@erykdarnowski.pl>",
   "homepage": "https://github.com/ErykDarnowski/ansb-teraz-tui#readme",
   "repository": {
     "type": "git",

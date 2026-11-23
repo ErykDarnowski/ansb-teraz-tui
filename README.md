@@ -2,6 +2,8 @@
 
 A terminal version of [**ANSB teraz**](https://erykdarnowski.pl/ansb.html), a small PWA I run on my website. ANSB teraz lets me look up my class's weekend timetable and the current lecture at a simple URL, without logging in to USOS.
 
+The plan it shows is for my group: part-time (zaoczne) Computer Science, group `INF-41-N`, at the [Stefan Batory University of Applied Sciences](https://ansb.pl) (Akademia Nauk Stosowanych Stefana Batorego, ANSB) in Skierniewice.
+
 ansb-teraz-tui shows the same thing (what's on right now, how long until it ends, what comes next) and runs fine in a small vim/tmux split. Both use the same API, which pulls the plan from USOS and adds the breaks between classes.
 
 - **Now view:** current block, countdown, next block and time left in the day, with progress bars. It uses big digits when there's room and switches to more compact layouts in small panes.

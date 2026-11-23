@@ -1,6 +1,8 @@
 # ansb-tui
 
-Terminal version of the ANSB weekend timetable. It runs fine in a small vim/tmux split.
+A terminal app for my weekend (zaoczne) uni timetable. It shows what's on right now, how long until it ends and what comes next, and it runs fine in a small vim/tmux split.
+
+It's a TUI port of the [ANSB web app](https://erykdarnowski.pl/ansb.html). Both read the same API, which pulls the plan from USOS and adds the breaks between classes.
 
 - **Now view:** current block, countdown, next block and time left in the day, with progress bars. It uses big digits when there's room and switches to more compact layouts in small panes.
 - **Timetable view:** the full Saturday or Sunday plan. Finished blocks are greyed out, the current one is marked `▶`, and long titles scroll.
@@ -68,4 +70,14 @@ ansb --at "2026-11-29 19:00"   # after classes
 
 ## Config
 
-`NO_COLOR=1` disables colours. `ANSB_API` or `--api` overrides the endpoint.
+| Variable / flag       | Default                                 |                                   |
+| --------------------- | --------------------------------------- | --------------------------------- |
+| `ANSB_API` / `--api`  | `https://erykdarnowski.pl/ansb-api.php` | schedule endpoint                 |
+| `ANSB_TZ`             | `Europe/Warsaw`                         | timezone the class times are in   |
+| `NO_COLOR`            | unset                                   | set to anything to disable colour |
+
+The default API is my own instance, which serves my group's plan. Please don't point scripts or polling at it.
+
+## License
+
+Proprietary, all rights reserved. See [LICENSE](LICENSE).

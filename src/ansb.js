@@ -28,7 +28,7 @@ const { values: opts } = parseArgs({
 })
 
 if (opts.help) {
-  console.log(`ansb ${VERSION} — weekend timetable in your terminal
+  console.log(`ansb ${VERSION} — ANSB teraz in your terminal
 
 Usage: ansb [options]
 

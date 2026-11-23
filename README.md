@@ -28,6 +28,15 @@ niedziela 12:30:02
                  PRZERWA [00:20]
 ```
 
+## Contents
+
+- [Install](#install)
+  - [Working on it](#working-on-it)
+- [Use](#use)
+- [Debugging](#debugging)
+- [Config](#config)
+- [License](#license)
+
 ## Install
 
 You need [Node.js](https://nodejs.org) 20 or newer (`node -v` to check). There are no other dependencies.

@@ -8,6 +8,9 @@ import {
 } from './schedule.js'
 
 const VERSION = '1.0.0'
+
+// Class times from the API are Polish local time; read them that way on any machine.
+process.env.TZ = process.env.ANSB_TZ || 'Europe/Warsaw'
 const DEFAULT_API = 'https://erykdarnowski.pl/ansb-api.php'
 const OFFSET_SYNC_MS = 10 * 60 * 1000
 const RETRY_MS = 60 * 1000

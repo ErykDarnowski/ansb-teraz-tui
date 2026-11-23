@@ -1,0 +1,13 @@
+{
+  "name": "ansb-tui",
+  "version": "0.1.0",
+  "description": "Weekend uni timetable in your terminal — TUI port of the ANSB web app",
+  "type": "module",
+  "bin": { "ansb": "src/ansb.js" },
+  "scripts": {
+    "start": "node src/ansb.js",
+    "test": "node --test"
+  },
+  "engines": { "node": ">=20" },
+  "license": "MIT"
+}
